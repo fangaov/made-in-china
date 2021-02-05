@@ -1,0 +1,298 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+#container{
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+}
+.head{
+    width: 100%;
+    height: 90px;
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #BA141A;
+}
+.head_main{
+    width: 990px;
+    height: 90px;
+    margin: 0 auto;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.head_main h3{
+    width: 210px;
+    height: 52px;
+    float: left;
+    margin-right: 10px;
+}
+.head_main p:nth-of-type(1){
+    float: left;
+    width: 85px;
+    height: 18px;
+    padding-left: 10px;
+    border-left: 1px solid #ccc;
+    color: #666;
+    font-size: 18px;
+    font-family: 'microsoft yahei';
+    margin-top: 30px;
+    line-height: 20px;
+}
+.head_main p:nth-of-type(2){
+    float: right;
+    margin-top: 40px;
+    font-size: 14px;
+}
+.head_main a{
+    color: #0066cc;
+}
+.main{
+    width: 988px;
+    height: 1030px;
+    border: 1px solid #eee;
+    border-top: 0px;
+    box-shadow: #ccc 0px 5px 5px 1px;
+    margin: 0 auto 50px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.main .tips{
+    width: 850px;
+    height: 36px;
+    margin: 0 auto;
+    font-size: 12px;
+    padding: 8px 10px 8px 33px;
+    background-color: #EDF4FA;
+    border: 1px solid #c7dbeb;
+    margin-top: 20px;
+    color: #1c75bb;
+    position: relative;
+}
+.main .tips i{
+    width: 16px;
+    height: 16px;
+    background: url(../img/iconAll.png) no-repeat;
+    background-position: -32px 0px;
+    position: absolute;
+    top: 10px;
+    left: 10px
+}
+.main .registerBox{
+    width: 988px;
+    height: 629px;
+    padding: 41px 0 50px;
+    border-bottom: 2px solid #f2f2f2;
+}
+.registerBox ul{
+    width: 988px;
+    height: 609px;
+    margin-top: 20px;
+}
+.registerBox ul li{
+    width: 988px;
+    height: 39px;
+    padding: 9px 0;
+    font-size: 12px;
+    line-height: 39px;
+}
+.registerBox ul li div{
+    float: left;
+}
+.registerBox ul li:nth-of-type(-n+9) div:nth-of-type(1){
+    width: 95px;
+    height: 39px;
+    margin-left: 175px;
+    text-align: right;
+}
+.registerBox ul li div input:nth-of-type(1){
+    width: 342px;
+    height: 38px;
+    border: 1px solid #eee;
+    margin-left: 10px;
+    margin-right: 15px;
+    text-indent: 10px;
+}
+.registerBox ul li div input:nth-of-type(1):focus{
+    outline: none;
+    border: 1px solid#1c75ff;
+}
+.registerBox ul li:nth-of-type(5) div input:nth-of-type(1){
+    width: 12.8px;
+    height: 12.8px;
+    margin-right: 2px;
+    position: relative;
+    top: 2px;
+}
+.registerBox ul li:nth-of-type(5) div input:nth-of-type(2){
+    margin: 0 2px 0 30px;
+    position: relative;
+    top: 2px;
+}
+.registerBox ul li:nth-of-type(6) div input:nth-of-type(1){
+    width: 342px;
+    margin-right: 0px;
+}
+.registerBox ul li:nth-of-type(6) div select{
+    width: 66px;
+    height: 38px;
+    border: 0px;
+    border-left: 1px solid #eee;
+    outline: #1c75ff;
+    position: relative;
+    margin-right: 15px;
+    left: -67px;
+}
+.registerBox ul li:nth-of-type(6) div:nth-of-type(3){
+    position: relative;
+    left: -67px;
+}
+.registerBox ul li:nth-of-type(8) div input{
+    width: 342px;
+    border-right: 0px;
+    margin-right: 0px;
+    vertical-align: bottom;
+    position: relative;
+    top: -15px;
+}
+.registerBox ul li:nth-of-type(8) div img{
+    width: 80px;
+    height: 36px;
+    margin-right: 15px;
+    position: relative;
+    top: -2px;
+    left: -82px;
+}
+.registerBox ul li:nth-of-type(8) div:nth-of-type(3){
+    position:relative;
+    left: -82px;
+}
+.registerBox ul li:nth-of-type(9) div input{
+    width: 232px;
+    margin-right: 0;
+}
+.registerBox ul li:nth-of-type(9) div input:nth-of-type(2){
+    outline: none;
+    width: 110px;
+    background-color: #fff;
+    height: 40px;
+    margin-right: 15px;
+    border: 1px solid #eee;
+    border-left: 0px;
+}
+.registerBox ul li:nth-of-type(9) div input:nth-of-type(2):hover{
+    background-color: #F2F2F2;
+}
+.registerBox ul li:nth-of-type(10) div{
+    margin-left: 270px;
+    width: 342px;
+    height: 85px;
+    color: #999;
+}
+.registerBox ul li:nth-of-type(10) div button{
+    width: 342px;
+    height: 40px;
+    margin-top: 7px;
+    background: linear-gradient(#f13b40 0,#d6343a 100%);
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 3px;
+    outline: medium;
+    cursor: pointer;
+}
+.registerBox ul li:nth-of-type(10) div input{
+    width: 12.8px;
+    height: 12.8px;
+}
+.registerBox ul li div span:nth-of-type(1){
+    color: #666;
+}
+.registerBox ul li div b:nth-of-type(1){
+    color: #cc220b;
+    margin-right: 5px;
+}
+.registerBox ul li div i{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/iconAll.png) no-repeat;
+    background-position: -64px -32px;
+    margin-right: 5px;
+}
+.registerBox ul li div:nth-of-type(3){
+    display: none;
+}
+.registerBox ul li div:nth-of-type(3) span{
+    color: #cc220b;
+    position: relative;
+    top: -3px;
+}
+.main_footer{
+    width: 988px;
+    height: 105px;
+}
+.main_footer ul li{
+    float: left;
+    width: 328px;
+    height: 105px;
+    margin-top: 40px;
+    list-style: none;
+}
+.main_footer ul li i{
+    float: left;
+    width: 80px;
+    height: 67px;
+    margin: 0 124px 15px;
+}
+.main_footer ul li:nth-of-type(1) i{
+    background: url(../img/register/icon_new_reg.png) no-repeat;
+}
+.main_footer ul li:nth-of-type(2) i{
+    background: url(../img/register/icon_new_reg.png) no-repeat;
+    background-position: -80px 0px;
+}
+.main_footer ul li:nth-of-type(3) i{
+    background: url(../img/register/icon_new_reg.png) no-repeat;
+    background-position: -160px 0px;
+}
+.main_footer ul li p{
+    float: left;
+    width: 328px;
+    text-align: center;
+    color:#999;
+    font-size: 14px;
+}
+.bottom{
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid #d9d9d9;
+    background-color: #F4F4F4;
+}
+.footer{
+    width: 990px;
+    height: 50px;
+    padding-top: 10px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+}
+.footer div{
+    width: 990px;
+    height: 20px;
+}
+.footer div a{
+    color: #666;
+    margin-right: 15px;
+}
+.footer a:hover{
+    color: #d6343a;
+}
+.footer p{
+    color: #999;
+}
+.footer p a{
+    color: #999;
+}
