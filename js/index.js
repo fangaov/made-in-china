@@ -1,7 +1,6 @@
 // 右侧固定菜单
 //改变右边固定菜单高度
 function setFixedMenuHeight(){
-    console.log('进入');
     $('.fixedMenu').css('height',window.innerHeight);
 }
 setFixedMenuHeight();
@@ -121,3 +120,101 @@ $('.headNav').on('mouseleave','li',function(){
 });
 
 
+// main轮播图部分
+var mainNum = 0;
+var mainTimer;
+function showImg(){
+    $('.bannerMain img').eq(mainNum).siblings('img').css('opacity','0');
+    $('.bannerMain img').eq(mainNum).animate({'opacity':'1'},200);
+    $('.bannerMain div span').eq(mainNum).addClass('showSpan').siblings('span').removeClass();
+    
+}
+// 自动启动定时器
+mainTimer = setInterval(function(){
+    mainNum++;
+    if(mainNum ==5){
+        mainNum = 0;
+    }
+    showImg();
+},2000);
+
+// 左按钮点击
+$('.bmLeftImg').click(function(){
+    if(mainNum == 0){
+        mainNum = 4
+    }else{
+        mainNum--;
+    }
+    showImg();
+});
+
+$('.bmLeftImg').mouseenter(function(){
+    $(this).css({'background':'#E92336'});
+});
+$('.bmLeftImg').mouseleave(function(){
+    $(this).css({'background':'rgba(0, 0, 0, .3)'});
+});
+// 右按钮点击
+$('.bmRightImg').click(function(){
+    console.log(mainNum)
+    if(mainNum == 4){
+        mainNum = 0;
+    }else{
+        mainNum++;
+    }
+    showImg();
+});
+
+// 
+$('.bmRightImg').mouseenter(function(){
+    $(this).css({'background':'#E92336'});
+});
+$('.bmRightImg').mouseleave(function(){
+    $(this).css({'background':'rgba(0, 0, 0, .3)'});
+});
+//鼠标悬浮图片之上
+$('.bannerMain').mouseenter(function(){
+    clearInterval(mainTimer);
+    $(this).children('p').css('display','block');
+});
+$('.bannerMain').mouseleave(function(){
+    mainTimer = setInterval(function(){
+        mainNum++;
+        if(mainNum ==5){
+            mainNum = 0;
+        }
+        showImg();
+    },2000);
+    $(this).children('p').css('display','none');
+});
+
+// span标签点击
+$('.bannerMain div span').click(function(){
+    mainNum = $(this).index();
+    showImg();
+});
+
+// 买卖家切换
+$('.buyers').mouseenter(function(){
+    $(this).addClass('menuShow');
+    $(this).children('i').css({'display':'block'});
+    $(this).siblings('.menuBuyers').css('display','block');
+    $('.seller').removeClass('menuShow');
+    $('.seller').children('i').css({'display':'none'});
+    $('.seller').siblings('.menuSeller').css('display','none');
+});
+$('.seller').mouseenter(function(){
+    $(this).addClass('menuShow');
+    $(this).children('i').css({'display':'block'});
+    $(this).siblings('.menuSeller').css('display','block');
+    $('.buyers').removeClass('menuShow');
+    $('.buyers').children('i').css({'display':'none'});
+    $('.buyers').siblings('.menuBuyers').css('display','none');
+});
+// 品牌浮动动画
+$('.brand>div').mouseenter(function(){
+    $(this).children('div').eq(1).stop().animate({'top':"0px"},300,function(){console.log('动画执行')});
+});
+$('.brand>div').mouseleave(function(){
+    $(this).children('div').eq(1).stop().animate({'top':"91px"},300,function(){console.log('动画执行')});
+});
