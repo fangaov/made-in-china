@@ -1,4 +1,4 @@
-// 右侧固定菜单
+// 右侧固定菜单开始
 //改变右边固定菜单高度
 function setFixedMenuHeight(){
     $('.fixedMenu').css('height',window.innerHeight);
@@ -8,7 +8,6 @@ setFixedMenuHeight();
 $(window).resize(function(){
     setFixedMenuHeight();
 });
-
 //固定菜单鼠标悬浮
 $('.fixedMenuMain').on('mouseenter','a',function(){
     // 用循环判断根据下标改变对应的p标签的背景图
@@ -36,7 +35,6 @@ $('.fixedMenuMain').on('mouseenter','a',function(){
         $(this).children('.popupText').css('display','block');
         $(this).children('.popupText').animate({'width':'80px'},200);
     }
-    
 });
 $('.fixedMenuMain').on('mouseleave','a',function(){
     switch($(this).index()){
@@ -61,12 +59,11 @@ $('.fixedMenuMain').on('mouseleave','a',function(){
         $(this).children('.popupText').css({'display':'none','width':0});
     }
 });
+// 右侧固定菜单结束
 
 
 
-
-
-//头部悬浮显示菜单
+//头部悬浮显示菜单开始
 $('.headRight').on('mouseenter','li',function(){
     //排除第一个li
     if($(this).index()!=0){
@@ -84,8 +81,10 @@ $('.headRight').on('mouseleave','li',function(){
         $(this).children('div').css('display','none');
     }
 });
+//头部悬浮显示菜单结束
 
-// 搜索框左边产品悬浮显示
+
+// 搜索框左边产品悬浮显示开始
 $('.chanpin').mouseenter(function(){
     $(this).children('div').stop().slideDown();
     $(this).children('p').css({'background':'url(../img/index/common_ico.gif no-repeat)','backgroundPosition':'60px -34px'});
@@ -94,9 +93,10 @@ $('.chanpin').mouseleave(function(){
     $(this).children('div').stop().slideUp();
     $(this).children('p').css({'background':'url(../img/index/common_ico.gif no-repeat)','backgroundPosition':'60px -10px'});
 });
+// 搜索框左边产品悬浮显示开始结束
 
 
-//头部导航栏菜单下横条悬浮显示
+//头部导航栏菜单下横条悬浮显示开始
 $('.headNav').on('mouseenter','li',function(){
     //排除前两个li，且第二个li的color改变
     if($(this).index()==1){
@@ -106,7 +106,6 @@ $('.headNav').on('mouseenter','li',function(){
         $(this).children('a').css('color','#E92336');
         $(this).children('i').css('display','block');
     }
-    
 });
 $('.headNav').on('mouseleave','li',function(){
     if($(this).index()==1){
@@ -116,11 +115,11 @@ $('.headNav').on('mouseleave','li',function(){
         $(this).children('a').css('color','#fff');
         $(this).children('i').css('display','none');
     }
-    
 });
+//头部导航栏菜单下横条悬浮显示结束
 
 
-// main轮播图部分
+// main轮播图部分开始
 var mainNum = 0;
 var mainTimer;
 function showImg(){
@@ -193,8 +192,10 @@ $('.bannerMain div span').click(function(){
     mainNum = $(this).index();
     showImg();
 });
+// main轮播图部分结束
 
-// 买卖家切换
+
+// 买卖家切换开始
 $('.buyers').mouseenter(function(){
     $(this).addClass('menuShow');
     $(this).children('i').css({'display':'block'});
@@ -211,10 +212,48 @@ $('.seller').mouseenter(function(){
     $('.buyers').children('i').css({'display':'none'});
     $('.buyers').siblings('.menuBuyers').css('display','none');
 });
-// 品牌浮动动画
+// 买卖家切换结束
+
+
+// 品牌浮动动画开始
 $('.brand>div').mouseenter(function(){
     $(this).children('div').eq(1).stop().animate({'top':"0px"},300,function(){console.log('动画执行')});
 });
 $('.brand>div').mouseleave(function(){
     $(this).children('div').eq(1).stop().animate({'top':"91px"},300,function(){console.log('动画执行')});
 });
+// 品牌浮动动画结束
+
+
+// 热门采购滚动数据生成开始
+(function(){
+    var str = '';
+    $.get('../data/purchaseContent.json',{},function(result){
+        for(var i = 0;i<result.length;i++){
+            str += "<li><div><p>"+result[i].name+"</p><a href='#'>"+result[i].a+"</a></div><div><p>"+result[i].number+"</p><h3>"+result[i].days+"</h3></div><div><a herf='#'>"+result[i].company+"</a></div></li>";
+        }
+        str+=str;
+        $('.purchaseContent ul').html(str);
+    },'json');
+})();
+// 热门采购滚动数据生成结束
+// 热门采购轮播开始
+var hotCarouselTimer;
+// hotCarouselTimer = setInterval(hotCarousel,50);
+function hotCarousel(){
+    // 调用一次此函数srcollTop值自增1
+    $('.purchaseContent').scrollTop($('.purchaseContent').scrollTop()+1);
+    if($('.purchaseContent').scrollTop()>912){
+        $('.purchaseContent').scrollTop(0);
+    }
+};
+$('.purchaseContent').mouseenter(()=>{
+    clearInterval(hotCarouselTimer);
+});
+$('.purchaseContent').mouseleave(()=>{
+    clearInterval(hotCarouselTimer);
+    hotCarouselTimer = setInterval(hotCarousel,50);
+});
+// 热门采购轮播结束
+
+

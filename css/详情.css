@@ -1,0 +1,420 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+#container{
+    width: 100%;
+    height: 5000px;
+}
+/* 右侧固定菜单样式 */
+.fixedMenu{
+    width: 36px;
+    background-color: #DBDBDB;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 100;
+}
+.fixedMenu .fixedMenuMain{
+    width: 36px;
+    height: 144px;
+    position: absolute;
+    top: 40%;
+}
+.fixedMenu .fixedMenuMain a{
+    width: 36px;
+    height: 36px;
+    position: relative;
+    /* background-color: aqua; */
+    float: left;
+}
+.fixedMenu .fixedMenuMain a p{
+    float: right;
+    color: #fff;
+}
+.fixedMenu .fixedMenuMain a p:nth-of-type(1){
+    width: 36px;
+    height: 36px;
+}
+.fixedMenu .fixedMenuMain a p:nth-of-type(2){
+    width: 0px;
+    height: 36px;
+    position: absolute;
+    left: -80px;
+    background-color: #E92336;
+    text-align: center;
+    line-height: 36px;
+    font-size:12px;
+    display: none;
+}
+.fixedMenu .fixedMenuMain a:nth-of-type(1) p:nth-of-type(1){
+    background: url(../img/index/fixedMenu.png) no-repeat;
+    background-position: -38px -36px;
+}
+.fixedMenu .fixedMenuMain a:nth-of-type(2) p:nth-of-type(1){
+    background: url(../img/index/fixedMenu.png) no-repeat;
+    background-position: -38px -108px;
+}
+.fixedMenu .fixedMenuMain a:nth-of-type(3) p:nth-of-type(1){
+    background: url(../img/index/fixedMenu.png) no-repeat;
+    background-position: -38px -252px;
+}
+.fixedMenu .fixedMenuMain a:nth-of-type(4) p:nth-of-type(1){
+    background: url(../img/index/fixedMenu.png) no-repeat;
+    background-position: -38px -360px;
+}
+.fixedMenu .fixedMenuMain a:nth-of-type(3) .popupImg{
+    width: 120px;
+    height: 162px;
+    left: -130px;
+    top: -100px;
+    background: url(../img/index/qcode_cn.png);
+    opacity: 0;
+}
+
+
+.head{
+    width: 100%;
+    height: 30px;
+    background-color: #f4f4f4;
+}
+.headmain{
+    width: 1190px;
+    height: 30px;
+    margin: 0 auto;
+}
+.headLeft{
+    width: 370px;
+    height: 30px;
+    float: left;
+    color: #333;
+}
+.headLeft span{
+    height: 14px;
+    font-size: 12px;
+    line-height: 30px;
+    color: #333;
+    float: left;
+}
+.headLeft a{
+    width: 68px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    float: left ;
+    margin-top: 8px;
+    color: #0055cc;
+}
+.headLeft a:nth-of-type(1){
+    width: 40px;
+    border-right: 1px solid #999;
+}
+.headRight{
+    float: right;
+}
+.headRight ul li{
+    float: left;
+    list-style: none;
+    height: 28px;
+    border: 1px solid #f4f4f4;
+    position: relative;
+    z-index: 10;
+}
+.headRight ul li>a{
+    color: #333;
+    font-size: 12px;
+    width: 89px;
+    height: 14px;
+    float: left;
+    margin-top: 7px;
+    text-align:center;
+    line-height: 14px;
+    border-right: 1px solid #f4f4f4;
+    
+}
+.headRight ul li>div{
+    position: absolute;
+    top: 29px;
+    left:-1px;
+    border: 1px solid #eee;
+    border-top: 0;
+    display: none;
+}
+.headRight ul li div{
+    background-color: #fff;
+}
+.headRight ul li div a{
+    float: left;
+    color: #333;
+}
+.headRight ul li:nth-of-type(2) div{
+    width: 152px;
+    height: 83px;
+}
+.headRight ul li div a{
+    font-size: 12px;
+}
+.headRight ul li:nth-of-type(2) div a{
+    width: 65px;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 5px;
+}
+.headRight ul li:nth-of-type(2) div a:nth-of-type(-n+2){
+    font-weight: 800;
+}
+.headRight ul li:nth-of-type(3) div{
+    width: 91px;
+    height: 114px;
+}
+.headRight ul li:nth-of-type(3) div a{
+    width: 86px;
+    height: 28px;
+    line-height: 28px;
+    margin-left: 5px;
+}
+.headRight ul li:nth-of-type(4) div{
+    width: 91px;
+    height: 86px;
+}
+.headRight ul li:nth-of-type(4) div a{
+    width: 86px;
+    height: 28px;
+    line-height: 28px;
+    margin-left: 5px;
+}
+.headRight ul li:nth-of-type(5) div{
+    width: 91px;
+    height: 86px;
+}
+.headRight ul li:nth-of-type(5) div a{
+    width: 86px;
+    height: 28px;
+    line-height: 28px;
+    margin-left: 5px;
+}
+.headRight ul li:nth-of-type(6)>div{
+    width: 275px;
+    height: 258px;
+    position: absolute;
+    left: -185px;
+}
+.headRight ul li:nth-of-type(6) div div{
+    width: 275px;
+    height: 43px;
+    line-height: 43px;
+    border-top: 1px dashed #ccc;
+}
+.headRight ul li:nth-of-type(6) div div:nth-of-type(1){
+    border-top: 0px;
+}
+.headRight ul li:nth-of-type(6) div div p{
+    float: left;
+    margin: 0 10px;
+    font-size: 12px;
+    font-weight: 800;
+}
+.headRight ul li:nth-of-type(6) div div a{
+    margin-right: 10px;
+}
+
+.headRight ul li .shoppingCart{
+    background: url(../img/详情/icon_cart.png) no-repeat;
+}
+.headRight ul li:nth-of-type(n+2)>a{
+    background: url(../img/index/common_ico.gif) no-repeat;
+    background-position: 78px -20px;
+
+}
+
+.headLogo{
+    width: 1190px;
+    height: 115px;
+    margin: 0 auto 30px;
+}
+.headLogoLeft{
+    float: left;
+    position: relative;
+}
+.headLogoLeft img{
+    margin-top: 20px;
+    float: left;
+}
+.headLogoLeft img:nth-of-type(2){
+    width: 230px;
+    border-left: 1px solid #eee;
+    padding-left: 10px;
+    margin-top: 35px;
+}
+.headLogoLeft img:nth-of-type(3){
+    width: 360px;
+    border: 1px solid #eee;
+    position: absolute;
+    top: 60px;
+    left: 220px;
+    display: none;
+}
+.headLogoLeft img:nth-of-type(2):hover+img:nth-of-type(3){
+    display: block;
+}
+.headLogoRight{
+    float: right;
+    width: 540px;
+    height: 70px;
+    margin-top: 30px;
+}
+.searchForm{
+    width: 540px;
+    height: 40px;
+}
+
+.searchForm input{
+    width: 333px;
+    height: 38px;
+    padding-left: 10px;
+    border: 2px solid #F4382D;
+    border-right: 0px;
+    outline: none;
+    float: left;
+}
+.searchForm a:nth-of-type(1){
+    float: left;
+    width: 90px;
+    height: 42px;
+    background-color: #F4382D;
+    color: #fff;
+    text-align: center;
+    line-height: 42px;
+    font-size: 14px;
+}
+.searchForm a:nth-of-type(2){
+    float: left;
+    width: 90px;
+    height: 42px;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 42px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+}
+.searchHot ul{
+    width: 700px;
+    height: 30px;
+}
+.searchHot ul li{
+    float: left;
+    margin-left: 10px;
+    list-style: none;
+}
+.searchHot ul li a{
+    color: #fff;
+    font-size: 12px;
+}
+.info{
+    width: 1190px;
+    height: 120px;
+    margin: 0 auto;
+}
+.info h3{
+    float: left;
+    width: 660px;
+    height: 40px;
+    font-size: 24px;
+    font-weight: normal;
+}
+.info p{
+    float: left;
+    width: 640px;
+    height: 53px;
+    font-size: 12px;
+}
+.info img{
+    float: right;
+    width: 90px;
+    height: 90px;
+    position: relative;
+    top: -40px;
+}
+.info span{
+    float: right;
+    font-size: 12px;
+    position: relative;
+    top: 55px;
+    right: -87px;
+}
+.headNav{
+    width: 100%;
+    height: 40px;
+    background-color: #f6676b;
+}
+.headNav ul{
+    width: 1190px;
+    height: 40px;
+    margin: 0 auto;
+}
+.headNav ul li{
+    list-style-type: none;
+    float: left;
+    width: 114px;
+    height: 38px;
+    line-height: 38px;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+}
+.headNav ul li i{
+    width: 7px;
+    height: 6px;
+    position: absolute;
+    top: 16px;
+    left: 100px;
+    background:url(../img/详情/nav_arrow.png) no-repeat;
+}
+.headNav ul li:nth-of-type(2) div{
+    width: 148px;
+    height: 225px;
+    position: absolute;
+    top: 40px;
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 7px 0;
+    display: none;
+}
+.headNav ul li:nth-of-type(2) div p{
+    width: 118px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px 0px 20px;
+    color: #333;
+    font-size: 12px;
+    text-align: left;
+    cursor: pointer;
+}
+.headNav ul li:nth-of-type(2) div p:nth-of-type(9){
+    color: #0066dd;
+}
+.headNav ul li:nth-of-type(2) div p:nth-of-type(-n+8):hover{
+    color: #e04b43;
+}
+.headNav ul li:nth-of-type(4) div{
+    width: 130px;
+    height: 40px;
+    text-align: left;
+    line-height: 40px;
+    font-size: 12px;
+    padding-left: 20px;
+    position: absolute;
+    top: 40px;
+    color: #333;
+    border: 1px solid #eee;
+    display: none;
+}
+
