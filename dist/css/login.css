@@ -1,0 +1,265 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+}
+.header{
+    width: 900px;
+    height: 90px;
+    margin: 0 auto;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.header h3{
+    width: 210px;
+    height: 52px;
+    margin-right:10px ;
+    float: left;
+}
+.header p{
+    float: left;
+    width: 44px;
+    height: 29px;
+    font-size: 22px;
+    line-height: 20px;
+    color: #666;
+    padding: 15px 0 0 10px;
+    border-left: 1px solid #eee;
+    margin-top: 10px;
+}
+.header>a{
+    float: right;
+    color: blue;
+    font-size: 12px;
+    padding-top: 50px;
+}
+.header a:hover{
+    color:#e1251b;
+}
+.header span{
+    float: right;
+    font-size: 12px;
+    padding-top: 50px;
+    padding-right: 10px;
+}
+.main{
+    width: 1536px;
+    height: 500px;
+    background: url(../img/login/login_bg.jpg);
+    background-position: -140px;
+    position: relative;
+}
+.loginBox{
+    width: 350px;
+    height: 443px;
+    position: absolute;
+    top: 30px;
+    right: 310px;
+    background-color: #fff;
+}
+.loginBox>i{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 60px;
+    height: 60px;
+    background: url(../img/login/qrcode_switch.png);
+    /* background-position: 60px 60px; */
+    cursor: pointer;
+}
+.loginMain{
+    width: 280px;
+    height: 360px;
+    padding: 16px 35px 15px;
+}
+.loginMain p{
+    font-size: 14px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+.loginMain span:first-of-type{
+    /* width: 280px; */
+    display: block;
+    background-color: #EDF4FA;
+    border: 1px solid #3D84F7;
+    color: #3D84F7;
+    font-size: 12px;
+    padding: 8px 8px 8px 30px;
+    margin-bottom: 10px;
+    line-height: 20px;
+    position: relative;
+}
+.loginMain input{
+    border: none;
+    outline: medium;
+}
+.loginMain span:first-of-type i{
+    position: absolute;
+    width: 16px;
+    height: 16px;   
+    top:10px;
+    left: 10px;
+    background: url(../img/iconAll.png) no-repeat;
+    background-position: -32px 0px;
+}
+.loginMain span:nth-of-type(2){
+    height: 30px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #d6343a;
+    display: inline-block;
+    width: 280px;
+    display: none;
+}
+.loginMain span:nth-of-type(2) i{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-top: 5px;
+    background: url(../img/iconAll.png) no-repeat;
+    background-position: -64px 0px;
+}
+.loginMain label:nth-of-type(-n+2){
+    width: 280px;
+    height: 38px;
+    line-height: 35px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.loginMain label:nth-of-type(2){
+    margin-bottom: 5px;
+}
+.loginMain label:nth-of-type(1) i{
+    width: 36px;
+    height: 22px;
+    border-right: 1px solid #ccc;
+    background: url(../img/login/use.png) no-repeat;
+    display: inline-block;
+    background-position: 8px 0;
+    vertical-align: middle;
+}
+.loginMain label:nth-of-type(2) i{
+    width: 36px;
+    height: 22px;
+    border-right: 1px solid #ccc;
+    background: url(../img/login/psw.png) no-repeat;
+    display: inline-block;
+    background-position: 8px 0;
+    vertical-align: middle;
+}
+.loginMain label:nth-of-type(3){
+    font-size: 12px;
+}
+.loginMain input:nth-of-type(1){
+    margin-right: 5px;
+}
+.loginMain a:nth-of-type(1){
+    font-size: 12px;
+    color: #333333;
+    margin-left: 20px;
+}
+.loginMain a:nth-of-type(2){
+    font-size: 12px;
+    color: #333333;
+    margin-left: 50px;
+}
+.loginMain button{
+    width: 280px;
+    height: 40px;
+    margin-top: 10px;
+    background: linear-gradient(#f13b40 0,#d6343a 100%);
+    border: 1px solid #D94146;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 3px;
+    outline: medium;
+    cursor: pointer;
+}
+.loginMain a:nth-of-type(3){
+    height: 50px;
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    color: #D6343A;
+    line-height: 50px;
+}
+.loginBox>a{
+    display: block;
+    height: 45px;
+    color: #666;
+    font-size: 12px;
+    line-height: 45px;
+    text-align: center;
+    background:#FAFAFA;
+    border-top: 1px solid #EEEEEE;
+    position: relative;
+}
+.loginBox a i{
+    width: 32px;
+    height: 18px;
+    display: inline-block;
+    background: url(../img/login/baizhuo.png) no-repeat;
+}
+.qrCode{
+    width: 350px;
+    height: 230px;
+    background-color: #fff;
+    position: absolute;
+    top: 120px;
+    display: none;
+}
+.qrCode p{
+    height: 20px;
+    text-align: center;
+    margin-top: 20px;
+    background: url(../img/login/saoma.png) no-repeat 85px 3px;
+}
+.qrCode p span{
+    color: #D6343A;
+}
+.qrCode img{
+    width: 135px;
+    height: 135px;
+    display: block;
+    margin: 20px auto 5px;
+    border: 1px solid #ccc;
+}
+.qrCode a{
+    color: #333;
+    text-align: center;
+    display: block;
+    font-size: 12px;
+}
+
+.bottom{
+    width: 990px;
+    height: 40px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 12px;
+}
+.bottom div{
+    width: 990px;
+    height: 20px;
+}
+.bottom div a{
+    color: #666;
+    margin-right: 15px;
+}
+.bottom a:hover{
+    color: #d6343a;
+}
+.bottom p{
+    color: #999;
+}
+.bottom p a{
+    color: #999;
+}
