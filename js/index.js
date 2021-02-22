@@ -13,16 +13,16 @@ $('.fixedMenuMain').on('mouseenter','a',function(){
     // 用循环判断根据下标改变对应的p标签的背景图
     switch($(this).index()){
         case 0:
-            $(this).children().eq(0).css({'background':'url(../img/index/fixedMenu.png) no-repeat','backgroundPosition':'0px -36px'});
+            $(this).children().eq(0).css({'background':'url(./img/index/fixedMenu.png) no-repeat','backgroundPosition':'0px -36px'});
             break;
         case 1:
-            $(this).children().eq(0).css({'background':'url(../img/index/fixedMenu.png) no-repeat','backgroundPosition':'0px -108px'});
+            $(this).children().eq(0).css({'background':'url(./img/index/fixedMenu.png) no-repeat','backgroundPosition':'0px -108px'});
             break;
         case 2:
-            $(this).children().eq(0).css({'background':'url(../img/index/fixedMenu.png) no-repeat','backgroundPosition':'0px -252px'});
+            $(this).children().eq(0).css({'background':'url(./img/index/fixedMenu.png) no-repeat','backgroundPosition':'0px -252px'});
             break;
         case 3:
-            $(this).children().eq(0).css({'background':'url(../img/index/fixedMenu.png) no-repeat','backgroundPosition':'0px -360px'});
+            $(this).children().eq(0).css({'background':'url(./img/index/fixedMenu.png) no-repeat','backgroundPosition':'0px -360px'});
             break;
         default:
             break;
@@ -39,16 +39,16 @@ $('.fixedMenuMain').on('mouseenter','a',function(){
 $('.fixedMenuMain').on('mouseleave','a',function(){
     switch($(this).index()){
         case 0:
-            $(this).children().eq(0).css({'background':'url(../img/index/fixedMenu.png) no-repeat','backgroundPosition':'-36px -36px'});
+            $(this).children().eq(0).css({'background':'url(./img/index/fixedMenu.png) no-repeat','backgroundPosition':'-36px -36px'});
             break;
         case 1:
-            $(this).children().eq(0).css({'background':'url(../img/index/fixedMenu.png) no-repeat','backgroundPosition':'-36px -108px'});
+            $(this).children().eq(0).css({'background':'url(./img/index/fixedMenu.png) no-repeat','backgroundPosition':'-36px -108px'});
             break;
         case 2:
-            $(this).children().eq(0).css({'background':'url(../img/index/fixedMenu.png) no-repeat','backgroundPosition':'-36px -252px'});
+            $(this).children().eq(0).css({'background':'url(./img/index/fixedMenu.png) no-repeat','backgroundPosition':'-36px -252px'});
             break;
         case 3:
-            $(this).children().eq(0).css({'background':'url(../img/index/fixedMenu.png) no-repeat','backgroundPosition':'-36px -360px'});
+            $(this).children().eq(0).css({'background':'url(./img/index/fixedMenu.png) no-repeat','backgroundPosition':'-36px -360px'});
             break;
         default:
             break;
@@ -68,7 +68,7 @@ $('.headRight').on('mouseenter','li',function(){
     //排除第一个li
     if($(this).index()!=0){
         $(this).css({'backgroundColor':'#fff',"border":'1px solid #fff'});
-        $(this).children('a').css({'color':'#333','background':'url(../img/index/common_ico.gif) no-repeat','backgroundPosition':'78px -45px'});
+        $(this).children('a').css({'color':'#333','background':'url(./img/index/common_ico.gif) no-repeat','backgroundPosition':'78px -45px'});
         $(this).children('div').css('display','block');
     }
     
@@ -77,7 +77,7 @@ $('.headRight').on('mouseleave','li',function(){
     //排除第一个li
     if($(this).index()!=0){
         $(this).css({'backgroundColor':'#F4382D',"border":'1px solid #F4382D'});
-        $(this).children('a').css({'color':'#fff','background':'url(../img/index/double11_icon.png) no-repeat','backgroundPosition':'78px -23px'});
+        $(this).children('a').css({'color':'#fff','background':'url(./img/index/double11_icon.png) no-repeat','backgroundPosition':'78px -23px'});
         $(this).children('div').css('display','none');
     }
 });
@@ -87,11 +87,11 @@ $('.headRight').on('mouseleave','li',function(){
 // 搜索框左边产品悬浮显示开始
 $('.chanpin').mouseenter(function(){
     $(this).children('div').stop().slideDown();
-    $(this).children('p').css({'background':'url(../img/index/common_ico.gif no-repeat)','backgroundPosition':'60px -34px'});
+    $(this).children('p').css({'background':'url(./img/index/common_ico.gif no-repeat)','backgroundPosition':'60px -34px'});
 });
 $('.chanpin').mouseleave(function(){
     $(this).children('div').stop().slideUp();
-    $(this).children('p').css({'background':'url(../img/index/common_ico.gif no-repeat)','backgroundPosition':'60px -10px'});
+    $(this).children('p').css({'background':'url(./img/index/common_ico.gif no-repeat)','backgroundPosition':'60px -10px'});
 });
 // 搜索框左边产品悬浮显示开始结束
 
@@ -228,7 +228,7 @@ $('.brand>div').mouseleave(function(){
 // 热门采购滚动数据生成开始
 (function(){
     var str = '';
-    $.get('../data/purchaseContent.json',{},function(result){
+    $.get('./data/purchaseContent.json',{},function(result){
         for(var i = 0;i<result.length;i++){
             str += "<li><div><p>"+result[i].name+"</p><a href='#'>"+result[i].a+"</a></div><div><p>"+result[i].number+"</p><h3>"+result[i].days+"</h3></div><div><a herf='#'>"+result[i].company+"</a></div></li>";
         }
@@ -239,7 +239,7 @@ $('.brand>div').mouseleave(function(){
 // 热门采购滚动数据生成结束
 // 热门采购轮播开始
 var hotCarouselTimer;
-// hotCarouselTimer = setInterval(hotCarousel,50);
+hotCarouselTimer = setInterval(hotCarousel,50);
 function hotCarousel(){
     // 调用一次此函数srcollTop值自增1
     $('.purchaseContent').scrollTop($('.purchaseContent').scrollTop()+1);

@@ -3,7 +3,7 @@ $('.headRight').on('mouseenter','li',function(){
     //排除第一个li
     if($(this).index()!=0){
         $(this).css({'backgroundColor':'#fff',"border":'1px solid #fff'});
-        $(this).children('a').css({'color':'#333','background':'url(../img/index/common_ico.gif) no-repeat','backgroundPosition':'78px -45px'});
+        $(this).children('a').css({'color':'#333','background':'url(./img/index/common_ico.gif) no-repeat','backgroundPosition':'78px -45px'});
         $(this).children('div').css('display','block');
     }
     
@@ -12,7 +12,7 @@ $('.headRight').on('mouseleave','li',function(){
     //排除第一个li
     if($(this).index()!=0){
         $(this).css({'backgroundColor':'#f4f4f4',"border":'1px solid #f4f4f4'});
-        $(this).children('a').css({'color':'#333','background':'url(../img/index/common_ico.gif) no-repeat','backgroundPosition':'78px -20px'});
+        $(this).children('a').css({'color':'#333','background':'url(./img/index/common_ico.gif) no-repeat','backgroundPosition':'78px -20px'});
         $(this).children('div').css('display','none');
     }
 });
@@ -33,16 +33,16 @@ $('.fixedMenuMain').on('mouseenter','a',function(){
     // 用循环判断根据下标改变对应的p标签的背景图
     switch($(this).index()){
         case 0:
-            $(this).children().eq(0).css({'background':'url(../img/index/fixedMenu.png) no-repeat','backgroundPosition':'0px -36px'});
+            $(this).children().eq(0).css({'background':'url(./img/index/fixedMenu.png) no-repeat','backgroundPosition':'0px -36px'});
             break;
         case 1:
-            $(this).children().eq(0).css({'background':'url(../img/index/fixedMenu.png) no-repeat','backgroundPosition':'0px -108px'});
+            $(this).children().eq(0).css({'background':'url(./img/index/fixedMenu.png) no-repeat','backgroundPosition':'0px -108px'});
             break;
         case 2:
-            $(this).children().eq(0).css({'background':'url(../img/index/fixedMenu.png) no-repeat','backgroundPosition':'0px -252px'});
+            $(this).children().eq(0).css({'background':'url(./img/index/fixedMenu.png) no-repeat','backgroundPosition':'0px -252px'});
             break;
         case 3:
-            $(this).children().eq(0).css({'background':'url(../img/index/fixedMenu.png) no-repeat','backgroundPosition':'0px -360px'});
+            $(this).children().eq(0).css({'background':'url(./img/index/fixedMenu.png) no-repeat','backgroundPosition':'0px -360px'});
             break;
         default:
             break;
@@ -59,16 +59,16 @@ $('.fixedMenuMain').on('mouseenter','a',function(){
 $('.fixedMenuMain').on('mouseleave','a',function(){
     switch($(this).index()){
         case 0:
-            $(this).children().eq(0).css({'background':'url(../img/index/fixedMenu.png) no-repeat','backgroundPosition':'-36px -36px'});
+            $(this).children().eq(0).css({'background':'url(./img/index/fixedMenu.png) no-repeat','backgroundPosition':'-36px -36px'});
             break;
         case 1:
-            $(this).children().eq(0).css({'background':'url(../img/index/fixedMenu.png) no-repeat','backgroundPosition':'-36px -108px'});
+            $(this).children().eq(0).css({'background':'url(./img/index/fixedMenu.png) no-repeat','backgroundPosition':'-36px -108px'});
             break;
         case 2:
-            $(this).children().eq(0).css({'background':'url(../img/index/fixedMenu.png) no-repeat','backgroundPosition':'-36px -252px'});
+            $(this).children().eq(0).css({'background':'url(./img/index/fixedMenu.png) no-repeat','backgroundPosition':'-36px -252px'});
             break;
         case 3:
-            $(this).children().eq(0).css({'background':'url(../img/index/fixedMenu.png) no-repeat','backgroundPosition':'-36px -360px'});
+            $(this).children().eq(0).css({'background':'url(./img/index/fixedMenu.png) no-repeat','backgroundPosition':'-36px -360px'});
             break;
         default:
             break;
