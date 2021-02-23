@@ -99,3 +99,71 @@ $('.headNav ul li').mouseleave(function(){
     $(this).css({'background':'#f6676b','color':'#fff'});
 });
 // 导航栏悬浮结束
+
+// 微信图标悬浮显示二维码开始
+$('.mainOneLeftImg div:nth-of-type(2) p span').eq(0).mouseenter(function(){
+    $(this).parent().siblings('div').css({display:'block'});
+});
+$('.mainOneLeftImg div:nth-of-type(2) p span').eq(0).mouseleave(function(){
+    $(this).parent().siblings('div').css({display:'none'});
+});
+// 微信图标悬浮显示二维码结束
+
+// 图片放大镜功能开始
+var minImg = document.querySelector('.mainMinImg img');
+var maxBox = document.querySelector('.mainMaxImg');
+var maxImg = document.querySelector('.mainMaxImg img');
+minImg.onmouseenter = function(){
+    maxBox.style.display = 'block';
+    this.onmousemove = function(ev){
+        var e = ev||event;
+        var minLeft = e.offsetX;
+        var minTop = e.offsetY;
+        console.log(minLeft+','+minTop)
+        if(minTop>60&&minTop<120){
+            minTop -=60;
+            maxImg.style.top = -minTop*2.22+'px';
+        }
+        if(minLeft>90&&minLeft<270){
+            minLeft -= 90;
+            maxImg.style.left = -minLeft*2.22+'px';
+        }
+    }
+};
+minImg.onmouseleave = function(){
+    maxBox.style.display = 'none';
+}
+// 图片放大镜功能结束
+
+// 商品数量加减开始
+$('.numAdd').click(function(){
+    modifyNum(true);
+});
+$('.numReduce').click(function(){
+    modifyNum(false);
+});
+function modifyNum(flag){
+    var oldstr = $('.number').val();
+    // console.log($('.number').val(oldstr++))
+    if(regs(oldstr)){
+        if(flag){
+            $('.number').val(9);
+        }else{
+            if(oldstr>0){
+                $('.number').val(3);
+            }
+        }
+        
+    }
+    
+}
+function regs(str){
+    var reg = /^[1-9]|\d/;
+    if(!reg.test(str)){
+        console.log(reg.test(str))
+        return false;
+    }else{
+        return true;
+    }
+}
+// 商品数量加减结束
