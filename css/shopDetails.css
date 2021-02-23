@@ -51,19 +51,19 @@ a{
     display: none;
 }
 .fixedMenu .fixedMenuMain a:nth-of-type(1) p:nth-of-type(1){
-    background: url(./img/index/fixedMenu.png) no-repeat;
+    background: url(../img/index/fixedMenu.png) no-repeat;
     background-position: -38px -36px;
 }
 .fixedMenu .fixedMenuMain a:nth-of-type(2) p:nth-of-type(1){
-    background: url(./img/index/fixedMenu.png) no-repeat;
+    background: url(../img/index/fixedMenu.png) no-repeat;
     background-position: -38px -108px;
 }
 .fixedMenu .fixedMenuMain a:nth-of-type(3) p:nth-of-type(1){
-    background: url(./img/index/fixedMenu.png) no-repeat;
+    background: url(../img/index/fixedMenu.png) no-repeat;
     background-position: -38px -252px;
 }
 .fixedMenu .fixedMenuMain a:nth-of-type(4) p:nth-of-type(1){
-    background: url(./img/index/fixedMenu.png) no-repeat;
+    background: url(../img/index/fixedMenu.png) no-repeat;
     background-position: -38px -360px;
 }
 .fixedMenu .fixedMenuMain a:nth-of-type(3) .popupImg{
@@ -71,7 +71,7 @@ a{
     height: 162px;
     left: -130px;
     top: -100px;
-    background: url(./img/index/qcode_cn.png);
+    background: url(../img/index/qcode_cn.png);
     opacity: 0;
 }
 
@@ -419,9 +419,183 @@ a{
 }
 
 .main{
+    width: 100%;
+    background: #FBE4E7 url(../img/shopDetails/main-bg.jpg) no-repeat;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.mainHeader{
     width: 1190px;
-    height: 11100px;
-    background: #FBE4E7 url(./);
+    height: 18px;
+    margin: 10px auto;
+}
+.mainHeader p{
+    font-size: 12px;
+    color: #999;
+}
+.mainHeader p span{
+    color: #666;
+}
+.mainHeader p span:hover{
+    color: #e41c2e;
 }
 
+
+.mainOne{
+    width: 1190px;
+    height: 600px;
+    margin: 0px auto 20px;
+    background: #fff;
+}
+.mainOne .mainOneLeft{
+    width: 1000px;
+    height: 100%;
+    position: relative;
+    /* background-color: #ccc; */
+    border-right: 1px solid #eee;
+}
+.mainOne .mainOneLeft .mainOneTitle{
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    float: left;
+}
+.mainOne .mainOneLeft .mainOneTitle>p{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+}
+.mainOne .mainOneLeft .mainOneTitle div{
+    width: 100px;
+    height: 130px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.mainOne .mainOneLeft .mainOneTitle div:hover p{
+    display: block;
+}
+.mainOne .mainOneLeft .mainOneTitle div>span{
+    float: right;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url(../img/shopDetails/show_icon.png) no-repeat;
+    background-position: -22px 0;
+}
+.mainOne .mainOneLeft .mainOneTitle div p{
+    width: 106px;
+    height: 136px;
+    position: absolute;
+    display: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    z-index: 10;
+}
+.mainOne .mainOneLeft .mainOneTitle div p img{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 3px;
+}
+.mainOne .mainOneLeft .mainOneTitle div p span{
+    width: 106px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    font-size: 12px;
+    background: #F2F2F2;
+    text-align: center;
+}
+.mainOne .mainOneLeft .mainOneLeftImg{
+    width: 400px;
+    height: 410px;
+    background-color: aqua;
+    margin: 0 20px;
+    float: left;
+}
+.mainOne .mainOneLeft .mainOneLeftInfo{
+    width: 540px;
+    height: 430px;
+    background-color: aquamarine;
+    float: left;
+}
+
+.mainTwo{
+    width: 1190px;
+    height: 300px;
+    margin: 0px auto 20px;
+    background: #fff;
+}
+
+
+
+.mainThree{
+    width: 1190px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+}
+
+
+
+.mainThree .mainThreeLeft{
+    width: 190px;
+    height: 680px;
+    background: #fff;
+    margin-right: 10px;
+    float: left;
+}
+
+
+
+.mainThree .mainThreeRight{
+    width: 990px;
+    float: left;
+    overflow: hidden;
+}
+
+
+
+.mainThree .mainThreeRight1{
+    width: 100%;
+    height: 9430px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+
+
+.mainThree .mainThreeRight2{
+    width: 100%;
+    height: 585px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+
+
+.mainThree .mainThreeRight3{
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    
+}
+
+
+
+.footer{
+    width: 100%;
+    height: 130px;
+    background: #fff;
+}
+
+
+
+.footer .footerContent{
+    width: 990px;
+    height: 100%;
+    margin: 0 auto 20px;
+    background: cadetblue;
+}
 
