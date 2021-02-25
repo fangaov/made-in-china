@@ -15,7 +15,11 @@ gulp.task('img', async()=>{
     gulp.src('./img/**')
     .pipe(gulp.dest('./dist/img/'));
 });
+gulp.task('data', async()=>{ 
+    gulp.src('./data/**')
+    .pipe(gulp.dest('./dist/data/'));
+});
 gulp.task('packAll',async()=>{
-    var runTasks =  gulp.series('html','js','css','img');
+    var runTasks =  gulp.series('html','js','css','img','data');
     return runTasks();
 });

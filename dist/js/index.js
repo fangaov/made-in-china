@@ -256,4 +256,8 @@ $('.purchaseContent').mouseleave(()=>{
 });
 // 热门采购轮播结束
 
+// 点击跳转页面
+$('.goShopDetails').click(function(){
+    window.location.href='shopDetails.html';
+});
 
