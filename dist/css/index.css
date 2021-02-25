@@ -387,27 +387,48 @@ a{
     position: relative;
     float: left;
 }
-.mainLeft ul li{
+.mainLeftNav{
+    position: relative;
+}
+.mainLeft .mainLeftNav>ul>li{
     width: 170px;
     height: 36px;
     line-height: 36px;
     list-style: none;
     padding-left: 20px;
 }
-.mainLeft ul li a{
+.mainLeft .mainLeftNav>ul>li:hover{
+    background: #eee;
+    color: #e41b2e;
+}
+.mainLeft .mainLeftNav>ul>li:hover>a{
+    color: #e41b2e;
+}
+.mainLeft .mainLeftNav>ul>li>a:hover{
+    text-decoration: underline;
+}
+.mainLeft .mainLeftNav>ul>li>a{
     font-size: 14px;
     font-weight: bolder;
     color: #333;
 }
-.mainLeft ul li span{
+.mainLeft .mainLeftNav>ul>li>span{
     display: inline-block;
     margin: 0 5px;
 }
 
 
 /* ****************未完***************** */
-.mainLeft .mainLeftText{
+.mainLeftNav ul li div{
+    width: 810px;
+    height: 540px;
+    position: absolute;
+    top: -10px;
+    left: 190px;
     display: none;
+    z-index: 99;
+    background: #fff;
+    border: 1px solid red;
 }
 /* ****************未完***************** */
 
@@ -423,6 +444,7 @@ a{
     width: 790px;
     height: 390px;
     position: relative;
+    cursor: pointer;
 }
 .bannerMain img{
     position: absolute;
@@ -446,6 +468,7 @@ a{
     line-height: 32px;
     font-size: 30px;
     display: none;
+    cursor: pointer;
 }
 .bannerMain .bmRightImg{
     width: 36px;
@@ -460,6 +483,8 @@ a{
     line-height: 32px;
     font-size: 30px;
     display: none;
+    cursor: pointer;
+
 }
 .bannerMain div{
     width: 90px;
@@ -478,6 +503,8 @@ a{
     border-radius: 50%;
     background-color: #fff;
     margin-left: 5px;
+    cursor: pointer;
+
 }
 .showSpan{
     background: #E92336 !important;
