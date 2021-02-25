@@ -247,10 +247,28 @@ $('.mainOneRightContent').mouseenter(function(e){
             $('.mainTwo ul li span').eq(i).text("￥"+result[i].price);
         }
     })
-})()
+})();
 // 导入商家推荐里的数据结束
 
+// 常用型号数据导入开始
+(function(){
+    $.get('./data/commonModels.json',{},function(result){
+        $('.models').html(result.models);
+    });
+})();
+// 常用型号数据导入结束
 
+
+// 向您推荐数据生成开始
+(function(){
+    for(let i=0;i<10;i++){
+        $('.mainThreeRight2Content ul li img').eq(i).attr('src','./img/shopDetails/recommend1.jpg');
+        $('.mainThreeRight2Content ul li span').eq(i).text('￥888.00');
+        $('.mainThreeRight2Content ul li p').eq(i).text('SCHONBUCH传感器ICKD6508');
+
+    }
+})();
+// 向您推荐数据生成结束
 
 
 // 跳转页面
