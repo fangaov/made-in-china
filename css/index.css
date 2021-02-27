@@ -1120,20 +1120,20 @@ a{
 }
 .goodSupplyMain{
     width: 1190px;
-    height: 600px;
-    overflow-x: auto;
+    height: 467px;
+    overflow: auto;
 }
 .goodSupplyCon{
-    width: 16660px;
-    height: 617px;
+    width: 17850px;
+    height: 450px;
 }
 .goodSupplyCon ul{
-    width: 16660px;
-    height: 600px;
+    width: 17850px;
+    height: 450px;
 }
 .goodSupplyCon ul li{
     width: 1190px;
-    height: 600px;
+    height: 450px;
     float: left;
     list-style: none;
 }
@@ -1151,6 +1151,7 @@ a{
     color: #fff;
 }
 .goodSupplyTit p img{
+    width: 22px;
     margin: 5px 0;
 }
 .goodSupply .goodSupplyLiLeft{
@@ -1181,6 +1182,7 @@ a{
 }
 .goodSupplyLiLeft p span:hover{
     color: #e41b2e;
+    cursor: pointer;
 }
 .goodSupplyLiLeft p span:nth-of-type(5){
     color: #e41b2e;
@@ -1214,33 +1216,36 @@ a{
 }
 .goodSupplyLiRight div img:hover{
     transform: scale(1.1);
+    cursor: pointer;
 }
 .goodSupplyLiRight div span:hover,.goodSupplyLiRight div p:hover{
     color: #e41b2e;
+    cursor: pointer;
 }
 
 .goodSupplier{
     width: 1190px;
     height: 545px;
     margin: 0 auto;
-    overflow: hidden;
+    position: relative;
 }
 .goodSupplierMain{
     width: 1190px;
-    height: 470px;
+    height: 418px;
     float: left;
+    overflow: hidden;
 }
 .goodSupplierCon{
-    width: 16660px;
-    height: 470px;
+    width: 17850px;
+    height: 435px;
 }
 .goodSupplierCon ul{
-    width: 1190px;
-    height: 470px;
+    width: 17850px;
+    height: 418px;
 }
 .goodSupplierCon ul li{
     width: 1190px;
-    height: 470px;
+    height: 418px;
     list-style: none;
     float: left;
 }
@@ -1269,6 +1274,7 @@ a{
 }
 .goodSupplierCon ul li>div>p:hover{
     color: #e41b2e;
+    cursor: pointer;
 }
 .goodSupplierCon ul li>div>p:hover span:nth-of-type(2){
     color: #fff;
@@ -1299,6 +1305,7 @@ a{
 }
 .goodSupplierCon ul li>div>span:hover{
     color: #e41b2e;
+    cursor: pointer;
 }
 .goodSupplierCon ul li>div>div{
     float: left;
@@ -1313,8 +1320,45 @@ a{
 }
 .goodSupplierCon ul li>div>div>img:hover{
     transform: scale(1.1);
+    cursor: pointer;
 }
-
+.goodSupplierPre{
+    width: 32px;
+    height: 50px;
+    background: #000;
+    opacity: 0.3;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    font-family: '宋体';
+    font-weight: 800;
+    position: absolute;
+    top: 47%;
+    left: 0;
+    z-index: 999;
+}
+.goodSupplierNext{
+    width: 32px;
+    height: 50px;
+    background: #000;
+    opacity: 0.3;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    font-family: '宋体';
+    font-weight: 800;
+    position: absolute;
+    top: 47%;
+    right: 0;
+    z-index: 999;
+}
+.goodSupplierPre:hover,.goodSupplierNext:hover{
+    background: #e41b2e;
+    opacity: 1;
+    cursor: pointer;
+}
 
 
 

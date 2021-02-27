@@ -258,7 +258,80 @@ $('.purchaseContent').mouseleave(()=>{
 
 
 // 优质货源和优质供应商联动开始
-
+(function(){
+    var cloneLi1;
+    var cloneLi2;
+    for(let i=0;i<14;i++){
+        cloneLi1 = $('.goodSupplyCon ul li').eq(0).clone(true);
+        cloneLi2 = $('.goodSupplierCon ul li').eq(0).clone(true);
+        $('.goodSupplyCon ul').append(cloneLi1);
+        $('.goodSupplierCon ul').append(cloneLi2);
+    }
+})();
+// 点击上一分类
+var goodNum = 0;
+var goodFlag = true;
+$('.goodSupplierNext').click(function(){
+    if(goodFlag){
+        goodFlag = false;
+        var reg1 = new RegExp('1');
+        var reg2 = new RegExp('2');
+        console.log()
+        var oldSrc = $('.goodSupplyTit p').eq(goodNum).children('img').attr('src').replace(reg2,'1');
+        $('.goodSupplyTit p').eq(goodNum).children('img').attr('src',oldSrc);
+        goodNum++;
+        if(goodNum>12){
+            console.log(goodNum);
+            $('.goodSupplyMain').animate({scrollLeft:goodNum*1190+'px'},500,function(){$(this).scrollLeft(0);goodFlag = true;})
+            $('.goodSupplierMain').animate({scrollLeft:goodNum*1190+'px'},200,function(){$(this).scrollLeft(0);})
+            goodNum = 0;
+        }else{
+            $('.goodSupplyMain').animate({scrollLeft:goodNum*1190+'px'},500,function(){goodFlag = true;})
+            $('.goodSupplierMain').animate({scrollLeft:goodNum*1190+'px'},500)
+        }
+        var newSrc = $('.goodSupplyTit p').eq(goodNum).children('img').attr('src').replace(reg1,'2');
+        $('.goodSupplyTit p').eq(goodNum).children('img').attr('src',newSrc);
+        $('.goodSupplyTit p').eq(goodNum).addClass('showSupplyP');
+        $('.goodSupplyTit p').eq(goodNum).siblings().removeClass('showSupplyP');
+        
+    }
+});
+$('.goodSupplierPre').click(function(){
+    if(goodFlag){
+        goodFlag = false;
+        var reg1 = new RegExp('1');
+        var reg2 = new RegExp('2');
+        var oldSrc = $('.goodSupplyTit p').eq(goodNum).children('img').attr('src').replace(reg2,'1');
+        $('.goodSupplyTit p').eq(goodNum).children('img').attr('src',oldSrc);
+        goodNum--;
+        if(goodNum<1){
+            console.log(goodNum);
+            goodNum = 14;
+            $('.goodSupplyMain').scrollLeft(goodNum*1190);
+            $('.goodSupplierMain').scrollLeft(goodNum*1190);
+            goodNum = 13;
+            $('.goodSupplyMain').animate({scrollLeft:goodNum*1190+'px'},500,function(){goodFlag = true;})
+            $('.goodSupplierMain').animate({scrollLeft:goodNum*1190+'px'},500,function(){})
+            
+        }else{
+            $('.goodSupplyMain').animate({scrollLeft:goodNum*1190+'px'},500,function(){goodFlag = true;})
+            $('.goodSupplierMain').animate({scrollLeft:goodNum*1190+'px'},500)
+        }
+        var newSrc = $('.goodSupplyTit p').eq(goodNum).children('img').attr('src').replace(reg1,'2');
+        $('.goodSupplyTit p').eq(goodNum).children('img').attr('src',newSrc);
+        $('.goodSupplyTit p').eq(goodNum).addClass('showSupplyP');
+        $('.goodSupplyTit p').eq(goodNum).siblings().removeClass('showSupplyP');
+        
+    }
+});
+// 点击下一分类
+// (function(){
+    
+//     for(let i=0;i<13;i++){
+        
+//         console.log(cloneLi2.html())
+//     }
+// })();
 // 优质货源和优质供应商联动结束
 
 // 点击跳转页面
