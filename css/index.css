@@ -1029,6 +1029,7 @@ a{
     font-size: 20px;
     font-weight: bolder;
     float: left;
+    color: #fff;
 }
 .market{
     width: 1190px;
@@ -1050,6 +1051,7 @@ a{
     width: 200px;
     height: 274px;
     float: left;
+    cursor: pointer;
 }
 .marketLeft div:nth-of-type(2),.marketRight div:nth-of-type(2){
     width: 390px;
@@ -1084,6 +1086,10 @@ a{
     height: 20px;
     margin: 10px 0 5px;
 }
+.marketLeft div:nth-of-type(n+3) p:hover,.marketRight div:nth-of-type(n+3) p:hover{
+    color: #e41b2e;
+    cursor: pointer;
+}
 .marketLeft div:nth-of-type(n+3) span,.marketRight div:nth-of-type(n+3) span{
     width: 100%;
     height: 20px;
@@ -1091,3 +1097,225 @@ a{
     font-size: 12px;
     color: #999;
 }
+.marketLeft div:nth-of-type(n+3) img:hover,.marketRight div:nth-of-type(n+3) img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.goodSupply{
+    width: 1190px;
+    height: 600px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+}
+.goodSupply .goodSupplyTit{
+    width: 1190px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    margin-bottom: 10px;
+    float: left;
+}
+.goodSupplyMain{
+    width: 1190px;
+    height: 600px;
+    overflow-x: auto;
+}
+.goodSupplyCon{
+    width: 16660px;
+    height: 617px;
+}
+.goodSupplyCon ul{
+    width: 16660px;
+    height: 600px;
+}
+.goodSupplyCon ul li{
+    width: 1190px;
+    height: 600px;
+    float: left;
+    list-style: none;
+}
+.goodSupplyTit p{
+    width: 85px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 12px;
+}
+.showSupplyP{
+    background-color: #EE2B3F;
+    color: #fff;
+}
+.goodSupplyTit p img{
+    margin: 5px 0;
+}
+.goodSupply .goodSupplyLiLeft{
+    width: 390px;
+    height: 450px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+    background: url(../img/index/goodSupply1.jpg) no-repeat;
+    float: left;
+}
+.goodSupplyLiLeft p{
+    width: 350px;
+    height: 70px;
+    position:absolute;
+    bottom: 40px;
+    right: 20px;
+}
+.goodSupplyLiLeft p span{
+    float: left;
+    padding: 5px 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    color: #333;
+    font-size: 12px;
+    background: #fff;
+}
+.goodSupplyLiLeft p span:hover{
+    color: #e41b2e;
+}
+.goodSupplyLiLeft p span:nth-of-type(5){
+    color: #e41b2e;
+}
+.goodSupplyLiLeft p span:nth-of-type(5):hover{
+    text-decoration: underline;
+}
+.goodSupplyLiRight{
+    width: 800px;
+    height: 450px;
+    float: left;
+}
+.goodSupplyLiRight div{
+    width: 190px;
+    height: 220px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    float: left;
+    background: #fff;
+}
+.goodSupplyLiRight div p{
+    margin-top: 10px;
+}
+.goodSupplyLiRight div span{
+    font-size: 12px;
+    color: #bbb;
+}
+.goodSupplyLiRight div img:hover{
+    transform: scale(1.1);
+}
+.goodSupplyLiRight div span:hover,.goodSupplyLiRight div p:hover{
+    color: #e41b2e;
+}
+
+.goodSupplier{
+    width: 1190px;
+    height: 545px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.goodSupplierMain{
+    width: 1190px;
+    height: 470px;
+    float: left;
+}
+.goodSupplierCon{
+    width: 16660px;
+    height: 470px;
+}
+.goodSupplierCon ul{
+    width: 1190px;
+    height: 470px;
+}
+.goodSupplierCon ul li{
+    width: 1190px;
+    height: 470px;
+    list-style: none;
+    float: left;
+}
+.goodSupplierCon ul li>div{
+    float: left;
+    width: 590px;
+    height: 204px;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.goodSupplierCon ul li>div:nth-of-type(1){
+    margin: 0 10px 10px 0px;
+}
+.goodSupplierCon ul li>div:nth-of-type(2){
+    margin-bottom: 10px;
+}
+.goodSupplierCon ul li>div:nth-of-type(4){
+    margin-left: 10px;
+}
+.goodSupplierCon ul li>div>p{
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    float: left;
+}
+.goodSupplierCon ul li>div>p:hover{
+    color: #e41b2e;
+}
+.goodSupplierCon ul li>div>p:hover span:nth-of-type(2){
+    color: #fff;
+    background: #e41b2e;
+}
+.goodSupplierCon ul li>div>p>span:nth-of-type(1){
+    float: left;
+}
+.goodSupplierCon ul li>div>p>span:nth-of-type(2){
+    float: right;
+    width: 14px;
+    height: 14px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace  ;
+    border: 1px solid #e41b2e;
+    color: #e41b2e;
+    border-radius: 50%;
+    transform: rotateZ(90deg);
+}
+.goodSupplierCon ul li>div>span{
+    float: left;
+    font-size: 12px;
+    color: #999;
+    margin: 2px 0 10px;
+}
+.goodSupplierCon ul li>div>span:hover{
+    color: #e41b2e;
+}
+.goodSupplierCon ul li>div>div{
+    float: left;
+}
+.goodSupplierCon ul li>div>div>img{
+    width: 100px;
+    border: 1px solid #eee;
+    margin-left: 10px;
+}
+.goodSupplierCon ul li>div>div>img:nth-of-type(1){
+    margin: 0;
+}
+.goodSupplierCon ul li>div>div>img:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+

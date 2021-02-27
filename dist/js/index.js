@@ -256,6 +256,11 @@ $('.purchaseContent').mouseleave(()=>{
 });
 // 热门采购轮播结束
 
+
+// 优质货源和优质供应商联动开始
+
+// 优质货源和优质供应商联动结束
+
 // 点击跳转页面
 $('.goShopDetails').click(function(){
     window.location.href='shopDetails.html';
